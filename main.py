@@ -75,4 +75,5 @@ async def on_message(message):
 
 print('Test Hallo Hallo Blöd')
 logger = __init_logs()
+
 client.run(os.environ.get("TOKEN", None))
