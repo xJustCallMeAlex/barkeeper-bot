@@ -1,16 +1,1 @@
-aiohttp~=3.7.0
-async-timeout>=3.0.1
-attrs~=21.4.0
-chardet~=4.0.0
 discord.py~=1.7.3
-idna~=3.3
-multidict~=6.0.2
-typing_extensions~=4.1.1
-yarl~=1.7.2
-asyncpg~=0.23.0
-pytz~=2021.3
-pip>=21.3.1
-setuptools>=58.0.4
-fuzzywuzzy~=0.18.0
-python-Levenshtein>=0.12.2
-aiosignal~=1.2.0
