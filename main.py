@@ -71,6 +71,6 @@ async def on_message(message):
             await message.channel.send(f'My commands are !add, !remove, !list')
             return
 
-
+print('Test Hallo Hallo Blöd')
 logger = __init_logs()
 client.run(os.environ.get("TOKEN", None))
