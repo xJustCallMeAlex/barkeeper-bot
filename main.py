@@ -57,6 +57,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    await message.channel.send('Hello')
+
     if message.channel.name == 'bot-text':
         if user_message.startswith('!add'):
             await message.channel.send(f'I added the bottle for {username}!')
@@ -72,7 +74,5 @@ async def on_message(message):
             return
 
 print('Test Hallo Hallo Blöd')
-test = client.get_channel(1003973010128121956)
-test.send('Hello i am here!')
 logger = __init_logs()
 client.run(os.environ.get("TOKEN", None))
