@@ -72,5 +72,7 @@ async def on_message(message):
             return
 
 print('Test Hallo Hallo Blöd')
+test = client.get_channel(1003973010128121956)
+test.send('Hello i am here!')
 logger = __init_logs()
 client.run(os.environ.get("TOKEN", None))
