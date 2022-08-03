@@ -9,9 +9,6 @@ import asyncpg
 from dataclasses import dataclass
 
 
-def is_valid(ctx):  # later check channel
-    return ctx.channel.name == 'bot-text'
-
 
 async def run():
     db = await asyncpg.create_pool(os.environ.get("DATABASE_URL", None), max_size=5, min_size=3)
