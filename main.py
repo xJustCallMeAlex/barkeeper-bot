@@ -1,13 +1,11 @@
 import asyncio
 import uuid
 
-import discord
 import os
 import logging
 from discord.ext import commands
 import asyncpg
 from dataclasses import dataclass
-
 
 
 async def run():
