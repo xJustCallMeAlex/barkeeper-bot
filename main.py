@@ -27,7 +27,7 @@ class Bot(commands.Bot):
         await self.process_commands(message)
         username = str(message.author).split('#')[0]
         user_message = str(message.content)
-        if message.channel.name == 'bot-text':
+        if message.channel.name == 'alkoholregal':
             if user_message.startswith('!add:'):
                 user_message = user_message.split(':')[1]
                 user_message = user_message.strip()
