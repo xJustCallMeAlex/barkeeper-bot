@@ -59,13 +59,13 @@ class Bot(commands.Bot):
 This is a list of all the commands.
 !add: bottlename - This command adds a bottle to the shelf.
 !remove: bottlename - This command removes a bottle from the shelf. 
-!list - This command lists the whole content of the shelf. Id plus name.
+!list - This command lists the whole content of the shelf. 
 !help - This command shows the help menu
 
 Important is that the bottlename does not contain ':'. 
 Because the colon is used to split the message string.
 
-This bot was programmed by Alexander Kolar with the help of Johannes Riedmann.
+This bot was programmed by Alexander Kolar with the help of Johannes Riedmann (aka Luigi-Fan).
 I hope you enjoy!
                         """)
                 return
