@@ -76,45 +76,7 @@ I hope you enjoy!
                 return
         print(message.content)
 
-    async def add(self, ctx, message):
-        if is_valid(ctx):
-            await self.db.execute(f"""
-                INSERT INTO drinks(drink_id, name) VALUES (gen_random_uuid(), '{message}');
-            """)
-            await ctx.send(f'{message} has been added to the shelf by {ctx.author}')
 
-    async def remove(self, ctx, message):
-        if is_valid(ctx):
-            await self.db.execute(f"""
-                DELETE FROM drinks WHERE name = '{message}';
-            """)
-            await ctx.send(f'{message} has been removed from the shelf by {ctx.author}')
-
-    async def content(self, ctx):
-        if is_valid(ctx):
-            result_set = await self.db.fetch(f"""
-                SELECT drink_id, name
-                FROM drinks
-                ORDER BY drink_id;
-            """)
-            drink_list = [str(Drink(*result)) for result in result_set]
-            await ctx.send('This is a list of all the Bottles')
-            await ctx.send("\n".join(drink_list))
-
-    async def summarize(self, ctx):
-        await ctx.send("""
-            This is a list of all the commands.
-            !add "bottlename"   - This command adds a bottle to the shelf. You need to put the bottlename in quotation marks.
-            !remove "bottlename"     - This command removes a bottle from the shelf. You need to put the bottlename in quotation marks.
-            !list                       - This command lists the whole content of the shelf. Id plus name.
-            !help                     - This command shows the help menu
-
-            This bot was programmed by Alexander Kolar with the help of Johannes Riedmann.
-            I hope you enjoy!
-        """)
-
-
-# await
 class CustomFormatter(logging.Formatter):
     grey = "\x1b[00;20m"
     green = "\x1b[32;20m"
